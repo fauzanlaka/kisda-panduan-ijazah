@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panduan Permohonan Ijazah</title>
+<meta name="description" content="Panduan langkah demi langkah memohon ijazah dan transkrip melalui Portal Mahasiswa KISDA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#14231f; --muted:#5b6b66; --line:#dfe7e4;
+  --brand:#2f9e6b; --brand-2:#43c08a; --brand-ink:#0d3b2a; --navy:#1a1f3a;
+  --warn-bg:#fff6dc; --warn-ink:#6b4a00; --ok-bg:#e5f6ee; --ok-ink:#17643f; --shadow:0 10px 30px rgba(16,40,32,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1513; --card:#16201d; --ink:#e7efec; --muted:#9db0aa; --line:#26342f;
+    --brand:#3fbf87; --brand-2:#5fd6a1; --brand-ink:#c9f2de; --navy:#0b0f22;
+    --warn-bg:#3a2f12; --warn-ink:#f6d98b; --ok-bg:#163527; --ok-ink:#9be5c0; --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1513; --card:#16201d; --ink:#e7efec; --muted:#9db0aa; --line:#26342f;
+  --brand:#3fbf87; --brand-2:#5fd6a1; --brand-ink:#c9f2de; --navy:#0b0f22;
+  --warn-bg:#3a2f12; --warn-ink:#f6d98b; --ok-bg:#163527; --ok-ink:#9be5c0; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{background:var(--navy);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;letter-spacing:.04em}
+.top nav a{color:#cfe9dd;text-decoration:none;font-weight:600;font-size:14px;margin-left:18px}
+.hero{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;padding:48px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.kicker{display:inline-block;background:rgba(255,255,255,.18);padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.hero h1{font-size:40px;line-height:1.15;margin:14px 0 12px;font-weight:800}
+.hero p{margin:0 0 20px;opacity:.95;font-size:17px}
+.steps-mini{display:flex;gap:10px;flex-wrap:wrap}
+.steps-mini a{background:#fff;color:var(--brand-ink);text-decoration:none;font-weight:700;font-size:14px;padding:9px 14px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .steps-mini a{background:#0d2a1f}}
+.video{background:#000;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.3);aspect-ratio:9/16;max-height:620px;margin:0 auto;width:100%;max-width:350px}
+.video video{width:100%;height:100%;display:block}
+section{padding:44px 0}
+.sec-h{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.badge{flex:none;width:46px;height:46px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px}
+.sec-h h2{margin:0;font-size:28px}
+.lead{color:var(--muted);margin:0 0 22px 60px}
+.box{border-radius:16px;padding:16px 18px;margin:0 0 22px}
+.box.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.box.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.box b{font-weight:700}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.doc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.doc .tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin-bottom:6px}
+.tag.req{background:var(--ok-bg);color:var(--ok-ink)}
+.tag.opt{background:var(--warn-bg);color:var(--warn-ink)}
+.doc h4{margin:0;font-size:16px}
+.doc p{margin:2px 0 0;color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card .shot{background:#eef2f3;aspect-ratio:496/700;overflow:hidden;border-bottom:1px solid var(--line)}
+.card .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.card .body{padding:14px 16px 16px}
+.card .n{font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.04em;text-transform:uppercase}
+.card h3{margin:2px 0 6px;font-size:17px;line-height:1.3}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.btn{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:0 7px;font-weight:600;font-size:13.5px;color:var(--ink);white-space:nowrap}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 24px}
+.flow span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+.flow i{color:var(--muted);font-style:normal}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:700}
+.faq p{margin:8px 0 0;color:var(--muted)}
+footer{padding:30px 0 50px;color:var(--muted);font-size:14px;text-align:center}
+hr.sep{border:0;border-top:1px solid var(--line);margin:0}
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .docs{grid-template-columns:1fr}
+  .lead{margin-left:0}
+  .top nav{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="logo">KISDA</div>
+<nav><a href="#langkah-1">Profil &amp; dokumen</a><a href="#langkah-2">Borang</a><a href="#langkah-3">Status</a><a href="#soalan">Soalan lazim</a></nav></div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="kicker">Portal Mahasiswa · Panduan</span>
+    <h1>Cara memohon ijazah &amp; transkrip</h1>
+    <p>Untuk mahasiswa yang telah tamat pengajian. Ikuti tiga langkah ini di Portal Mahasiswa KISDA — melalui telefon atau komputer.</p>
+    <div class="steps-mini"><a href="#langkah-1">1 · Semak profil &amp; dokumen</a><a href="#langkah-2">2 · Isi &amp; hantar borang</a><a href="#langkah-3">3 · Semak status</a></div>
+  </div>
+  <div class="video"><video src="media/panduan-ijazah.mp4" poster="img/poster.jpg" controls playsinline preload="metadata"></video></div>
+</div></div>
+
+<section id="langkah-1"><div class="wrap">
+  <div class="sec-h"><div class="badge">1</div><h2>Semak profil &amp; muat naik dokumen</h2></div>
+  <p class="lead">Maklumat dalam profil anda akan dicetak pada ijazah. Pastikan semuanya betul sebelum memohon.</p>
+  <div class="docs">
+    <div class="doc"><span class="tag req">Wajib</span><h4>Salinan Syahadah</h4><p>Syahadah 3 Tsanawi</p></div>
+    <div class="doc"><span class="tag req">Wajib</span><h4>Salinan Kad Pengenalan</h4><p>Kad pengenalan diri</p></div>
+    <div class="doc"><span class="tag opt">Pilihan</span><h4>Salinan Passport</h4><p>Muat naik jika ada</p></div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="shot"><img src="img/1a.jpg" alt="Halaman Profil Mahasiswa" loading="lazy"></div><div class="body"><div class="n">1.1</div><h3>Buka Profil</h3><p>Tekan <span class="btn">Profil</span> di bar bawah. Semak nama, tarikh lahir, nombor kad pengenalan dan alamat.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/1b.jpg" alt="Borang Ubah Profil" loading="lazy"></div><div class="body"><div class="n">1.2</div><h3>Betulkan maklumat</h3><p>Tekan <span class="btn">UBAH PROFIL</span>. Lengkapkan Nama (Arab), Nama (English) dan Nama (Thai) — ketiga-tiganya wajib.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/1c.jpg" alt="Butang Simpan" loading="lazy"></div><div class="body"><div class="n">1.3</div><h3>Simpan</h3><p>Tatal ke bawah, semak tarikh lahir, telefon dan alamat, kemudian tekan <span class="btn">Simpan</span>.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/1d.jpg" alt="Status Dokumen" loading="lazy"></div><div class="body"><div class="n">1.4</div><h3>Semak Status Dokumen</h3><p>Dokumen yang sudah ada bertanda hijau; yang belum ada bertanda kuning.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/1e.jpg" alt="Modal Upload Dokumen" loading="lazy"></div><div class="body"><div class="n">1.5</div><h3>Upload Dokumen</h3><p>Tekan <span class="btn">Upload Dokumen</span>, pilih fail (JPG/PNG, maks. 1.5MB) bagi dokumen yang belum ada, kemudian tekan <span class="btn">Upload</span>.</p></div></div>
+  </div>
+</div></section>
+<hr class="sep">
+
+<section id="langkah-2"><div class="wrap">
+  <div class="sec-h"><div class="badge">2</div><h2>Isi &amp; hantar borang Mohon Ijazah</h2></div>
+  <p class="lead">Laluan: <b>Home → Permohonan → Mohon Ijazah</b>.</p>
+  <div class="cards">
+    <div class="card"><div class="shot"><img src="img/2a.jpg" alt="Kad Mohon Ijazah" loading="lazy"></div><div class="body"><div class="n">2.1</div><h3>Buka Mohon Ijazah</h3><p>Di halaman utama tekan <span class="btn">Permohonan</span>, kemudian kad <span class="btn">Mohon Ijazah</span>.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/2b.jpg" alt="Maklumat Pelajar" loading="lazy"></div><div class="body"><div class="n">2.2</div><h3>Semak Maklumat Pelajar</h3><p>Maklumat diambil terus daripada profil. Jika ada yang salah, tekan <span class="btn">Edit di Profil</span>.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/2c.jpg" alt="Peringkat Ijazah dan Data Skripsi" loading="lazy"></div><div class="body"><div class="n">2.3</div><h3>Peringkat &amp; tajuk tesis</h3><p>Pilih <b>Sarjana (S1)</b> atau <b>Diploma</b>. Bagi Sarjana, isi tajuk tesis (Melayu, English, Arab, Thai — pilihan).</p></div></div>
+    <div class="card"><div class="shot"><img src="img/2d.jpg" alt="Dokumen Yang Dipohon" loading="lazy"></div><div class="body"><div class="n">2.4</div><h3>Dokumen Yang Dipohon</h3><p>Tandakan <b>Syahadah (Ijazah)</b> dan <b>Transkrip Nilai</b> mengikut bahasa. Bahasa ikut fakulti: Thai + Arab, atau Thai + Melayu.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/2e.jpg" alt="Butang Hantar Permohonan" loading="lazy"></div><div class="body"><div class="n">2.5</div><h3>Hantar Permohonan</h3><p>Pastikan Salinan Syahadah dan Salinan Kad Pengenalan bertanda hijau di bahagian <b>Dokumen Pendukung</b>, kemudian tekan <span class="btn">Hantar Permohonan</span>.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/2f.jpg" alt="Permohonan Berhasil Diajukan" loading="lazy"></div><div class="body"><div class="n">2.6</div><h3>Simpan kod permohonan</h3><p>Kod permohonan (contoh <b>GR-2026-00045</b>) dipaparkan. Tekan <span class="btn">Lihat Status</span>.</p></div></div>
+  </div>
+</div></section>
+<hr class="sep">
+
+<section id="langkah-3"><div class="wrap">
+  <div class="sec-h"><div class="badge">3</div><h2>Semak status permohonan</h2></div>
+  <p class="lead">Permohonan disemak oleh beberapa unit mengikut turutan. Setiap langkah yang selesai bertanda hijau.</p>
+  <div class="flow"><span>Permohonan Diajukan</span><i>→</i><span>Verifikasi Fakulti</span><i>→</i><span>Verifikasi Tamhidi</span><i>→</i><span>Verifikasi Kewangan</span><i>→</i><span>Verifikasi Hal Ehwal Pelajar</span><i>→</i><span>Verifikasi Akademik</span><i>→</i><span>Selesai</span></div>
+  <div class="cards">
+    <div class="card"><div class="shot"><img src="img/3a.jpg" alt="Status Permohonan Ijazah" loading="lazy"></div><div class="body"><div class="n">3.1</div><h3>Status Permohonan Ijazah</h3><p>Kod permohonan, status semasa (<b>Menunggu</b>, <b>Diluluskan</b>, <b>Ditolak</b> atau <b>Selesai</b>) dan butang <span class="btn">PDF</span> untuk mencetak borang.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/3b.jpg" alt="Progress Verifikasi" loading="lazy"></div><div class="body"><div class="n">3.2</div><h3>Progress Verifikasi</h3><p>Lihat di unit mana permohonan anda sedang disemak.</p></div></div>
+    <div class="card"><div class="shot"><img src="img/3c.jpg" alt="Permohonan Sebelumnya" loading="lazy"></div><div class="body"><div class="n">3.3</div><h3>Semak semula bila-bila masa</h3><p>Buka <b>Mohon Ijazah</b>; permohonan anda ada di <b>Permohonan Sebelumnya</b>. Tekan <span class="btn">Lihat</span>.</p></div></div>
+  </div>
+</div></section>
+<hr class="sep">
+
+<section id="soalan" class="faq"><div class="wrap">
+  <div class="sec-h"><h2>Soalan lazim</h2></div>
+  <details><summary>Adakah Salinan Passport wajib?</summary><p>Tidak. Salinan Passport hanyalah pilihan. Yang wajib ialah Salinan Syahadah dan Salinan Kad Pengenalan.</p></details>
+  <details><summary>Nama saya salah di Maklumat Pelajar. Apa perlu dibuat?</summary><p>Tekan <b>Edit di Profil</b> (atau Profil → UBAH PROFIL), betulkan, dan tekan Simpan sebelum menghantar permohonan. Data ini digunakan dalam dokumen rasmi.</p></details>
+  <details><summary>Adakah tajuk tesis wajib diisi?</summary><p>Tidak wajib, tetapi digalakkan bagi peringkat Sarjana (S1) supaya tajuk dicetak dengan betul.</p></details>
+  <details><summary>Saya tidak melihat butang atau kad Mohon Ijazah.</summary><p>Permohonan ijazah dibuka kepada mahasiswa yang telah lulus semua mata pelajaran yang diperlukan. Hubungi fakulti jika anda yakin telah layak.</p></details>
+  <details><summary>Fail saya lebih besar daripada 1.5MB.</summary><p>Sistem akan mengecilkan gambar secara automatik. Gunakan format JPG, JPEG atau PNG.</p></details>
+</div></section>
+
+<footer><div class="wrap">KISDA · Panduan Permohonan Ijazah · Maklumat peribadi dalam gambar telah dikaburkan.</div></footer>
+</body>
+</html>
